@@ -1,0 +1,15 @@
+<?php
+/**
+ * @see Mage_Page_Block_Template_Links
+ */
+?>
+<ul class="links">
+	<li class="first">
+		<?php if (! Mage::getSingleton('customer/session')->isLoggedIn()): ?>
+		<span class="login-popup"><a href="#<?php //echo Mage::helper('customer')->getLoginUrl(); ?>"><?php echo $this->__('My Account') ?></a><span>
+		<?php else: ?>
+		<a href="<?php echo Mage::helper('customer')->getLoginUrl(); ?>"><?php echo $this->__('My Account') ?></a>
+		<?php endif; ?>
+	</li>
+	<li><a title="Find a store" href="/store-locator">Find a store</a></li>
+</ul>
